@@ -51,7 +51,7 @@ function LoginPage() {
     try{
       console.log(inputs)
       console.log("Hellp")
-     const {data} = await axios.post("http://localhost:8000/gcode/login",{username:inputs.username,email:inputs.email,password:inputs.password});
+     const {data} = await axios.post("https://threed-printing-4.onrender.com/gcode/login",{username:inputs.username,email:inputs.email,password:inputs.password});
      console.log(data);
      if(data){
        navigate("/index")
