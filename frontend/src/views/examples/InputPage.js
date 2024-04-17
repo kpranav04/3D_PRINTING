@@ -15,7 +15,7 @@ function UploadFile() {
     const [errors,setErrors] = useState('')
 
 
-    let api = 'http://127.0.0.1:8000/gcode/stl'
+    let api = 'https://threed-printing-4.onrender.com/gcode/stl'
 
 
     const saveFile = () =>{
@@ -48,7 +48,7 @@ function UploadFile() {
     const getFiles = async() =>{
         try{
             
-            const { data } = await axios.get("http://localhost:8000/gcode/download/", { params: { file_name: name } });
+            const { data } = await axios.get("https://threed-printing-4.onrender.com/gcode/download/", { params: { file_name: name } });
             if(data){
                 console.log(data)
                 console.log(Object.keys(data))
